@@ -1,3 +1,10 @@
+<style>
+    .zoom:hover {
+        transition: transform .2s;
+        transform: scale(1.2);
+        margin-left: 100px;
+    }
+</style>
 <div style="height: 60px; width: 100%; background-color: #a9e5ea;">
     <img style="height: 60px; width: 460px; position: absolute; right: 0px;" src="recursos/imgs/H1.png">
     <p style="position: absolute;color: #294666;margin-left: 43px;margin-top: 26px;font-size: 12px;">TÓPICO<strong>
@@ -13,7 +20,8 @@
     <div style="margin-left: 42px;margin-top: 19px;width: 807px;">
         <p>No estudo realizado em Belo Horizonte sobre a avaliação da Atenção Primária e a percepção do usuário
             sobre a
-            qualidade da assistência, medido pelo Primary Health Care Assessment Tool (PCATool), foi evidenciada a
+            qualidade da assistência, medido pelo <i>Primary Health Care Assessment Tool</i> (PCATool), foi
+            evidenciada a
             seguinte
             relação de atributos e indicadores de qualidade:</p>
         <div style="margin-left: 60px;">
@@ -22,25 +30,25 @@
             </div>
             <div
                 style="margin-top: 39px;margin-left: -73px;display: flex;flex-direction: column;justify-content: space-between;height: 261px;">
-                <div id="botao_1" style="width: 300px; height: 55px; margin-left: -50px; ">
+                <div id="botao_1" style="width: 300px; height: 55px; margin-left: -50px; cursor: pointer;" class="">
                     <p
                         style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 141px;">
                         Acesso</p>
                     <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;width: 240px;">
                 </div>
-                <div id="botao_2" style="width: 300px; height: 55px; margin-left: -50px; ">
+                <div id="botao_2" style="width: 300px; height: 55px; margin-left: -50px; cursor: pointer;" class="">
                     <p
                         style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 118px;">
                         Primeiro contato</p>
                     <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;width: 240px;">
                 </div>
-                <div id="botao_3" style="width: 300px; height: 55px; margin-left: -50px; ">
+                <div id="botao_3" style="width: 300px; height: 55px; margin-left: -50px; cursor: pointer;" class="">
                     <p
                         style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 108px;">
                         Longitudinalidade</p>
                     <img src="recursos/imgs/Group_2454.svg" style="margin-left: 50px;width: 240px;">
                 </div>
-                <div id="botao_4" style="width: 300px; height: 55px; margin-left: -50px; ">
+                <div id="botao_4" style="width: 300px; height: 55px; margin-left: -50px; cursor: pointer;" class="">
                     <p
                         style="text-align: center;font: normal normal bold 12px/18px Poppins;color: #3B265D;position: absolute;margin-left: 93px;">
                         Orientação comunitária</p>
@@ -49,27 +57,27 @@
             </div>
         </div>
         <div>
-            <div id="janela_1" style="position: absolute; top: 200px; left: 300px;">
+            <div id="janela_1" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Acesso</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 451px;">Ausência de
                     queixa aos serviços de saúde por parte do usuário. Realização de pelo menos uma consulta médica
                     no ano com especialista.</p>
             </div>
-            <div id="janela_2" style="position: absolute; top: 237px; left: 300px;">
+            <div id="janela_2" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Primeiro
                     contato</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 466px;">Recebimento
                     pelo usuário de aconselhamento médico sobre dieta, atividade física, álcool e tabagismo.</p>
 
             </div>
-            <div id="janela_3" style="position: absolute; top: 200px; left: 300px;">
+            <div id="janela_3" style="position: absolute; top: 200px; left: 300px; cursor: pointer; display: none;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">
                     Longitudinalidade</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">Ausência de
                     queixa quanto aos serviços.<br> Realização de pelo menos uma consulta médica no ano com
                     especialista.</p>
             </div>
-            <div id="janela_4" style="position: absolute; top: 200px; left: 300px; ">
+            <div id="janela_4" style="position: absolute; top: 200px; left: 300px; cursor: pointer;">
                 <p style="text-align: center;font: normal normal bold 16px/18px Poppins;color: #FFFFFF;">Orientação
                     comunitária</p>
                 <p style="font: normal normal normal 12px/18px Poppins;color: #FFFFFF;width: 526px;">Determinação da
