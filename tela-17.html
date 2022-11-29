@@ -6,18 +6,88 @@
         style="position: absolute;font: normal normal normal 11px/15px Poppins;letter-spacing: 0px;color: #294666;margin-left: 112px;margin-top: 17px;width: 310px;">
         AFERIÇÃO DE RESULTADOS DAS AÇÕES E DAS ESTRATÉGIAS PARA A MELHORIA DA QUALIDADE DA APS</p>
 </div>
-<div style="margin-top: 116px;margin-left: 66px;width: 758px;">
-    <p style="font: normal normal bold 16px/30px Poppins;color: #2F5579;">1. Internações por condições sensíveis à
-        Atenção Primária (ICSAP)</p>
-    <p>É um indicador de atividade hospitalar que remete à qualidade indireta da APS e de sua capacidade em resolver
-        os
-        problemas de saúde. </p>
-    <p>Segundo Alfradique e Elmira (2009), o ICSAP representa um conjunto de condições e problemas
-        de saúde em que o risco de internação poderia ter sido diminuído com medidas de prevenção, diagnóstico,
-        tratamento de doenças agudas e crônicas pela APS, reduzindo as hospitalizações.</p>
+<div style="margin-top: 83px;margin-left: 41px;width: 808px;">
+    <p style="margin-top: 50px;">Agora, saiba o que Castro <i>et al</i>. (2020) relataram sobre esse indicador em
+        algumas
+        partes do mundo. </p>
+    <p>Clique nas bandeiras para conhecer.</p>
+    <div class="animate__animated animate__backInRight" style="margin-top: 54px;margin-left: 17px;display: flex;width: 750px;justify-content: space-between;">
+        <img id="botao_1" src="recursos/imgs/img1-slide-17.png" style="width: 156px; cursor: pointer;">
+        <img id="botao_2" src="recursos/imgs/img2-slide-17.png" style="width: 170px; cursor: pointer;">
+        <img id="botao_3" src="recursos/imgs/img3-slide-17.png" style="width: 199px; cursor: pointer;">
+    </div>
+    <div>
+        <div class="jan" id="janela_1" style="cursor: pointer; display: none;">
+            <div
+                style="width: 767px;height: 103px;background: #3A4A9D 0% 0% no-repeat padding-box;border-radius: 10px;display: flex;position: absolute;top: 195px;left: 57px;align-items: center;justify-content: space-evenly;color: white;">
+                <div style="width: 720px;">
+                    <p>Estudos realizados no Reino Unido apontam que a vacinação incompleta e a falta de consultas
+                        para
+                        acompanhamento do desenvolvimento apresentaram maior risco para internação de condições
+                        sensíveis à APS (CASTRO <i>et al.</i>, 2020).</p>
+                </div>
+                <p
+                    style="font: normal normal normal 14px/18px Poppins;letter-spacing: 0px;color: white;position: absolute;top: -9px;left: 748px;">
+                    x</p>
+            </div>
+        </div>
+        <div class="jan" id="janela_2" style="cursor: pointer; display: none;">
+            <div
+                style="width: 767px;height: 103px;background: #BA2529 0% 0% no-repeat padding-box;border-radius: 10px;display: flex;position: absolute;top: 195px;left: 57px;align-items: center;justify-content: space-evenly;color: white;">
+                <div style="width: 720px;">
+                    <p>Estudo realizado nos Estados Unidos, com público-alvo de idosos acima de 65 anos, demonstrou que
+                        as pessoas menos satisfeitas com a coordenação e a qualidade do cuidado também apresentavam
+                        maior tendência à internação hospitalar, sendo que a continuidade do cuidado e a acessibilidade
+                        dos serviços são fatores que contribuem na redução das taxas de ICSAP (CASTRO <i>et al.</i>,
+                        2020).</p>
+                </div>
+                <p
+                    style="font: normal normal normal 14px/18px Poppins;letter-spacing: 0px;color: white;position: absolute;top: -9px;left: 748px;">
+                    x</p>
+            </div>
+        </div>
+        <div class="jan" id="janela_3" style="cursor: pointer; display: none;">
+            <div
+                style="width: 767px;height: 103px;background: #29696D 0% 0% no-repeat padding-box;border-radius: 10px;display: flex;position: absolute;top: 195px;left: 57px;align-items: center;justify-content: space-evenly;color: white;">
+                <div style="width: 720px;">
+                    <p>No caso específico do Brasil, observou-se que aspectos relacionados à estrutura e ao processo de
+                        trabalho podem ter relação com os resultados e as ocorrências das taxas de internação por causas
+                        sensíveis à APS (CASTRO <i>et al.</i>, 2020).</p>
+                </div>
+                <p
+                    style="font: normal normal normal 14px/18px Poppins;letter-spacing: 0px;color: white;position: absolute;top: -9px;left: 748px;">
+                    x</p>
+            </div>
+        </div>
+    </div>
 </div>
 <footer style="width: 1008px;height: 19px;display: flex;background-color: #CEE4F1;">
     <div style="margin-top: -8px;display: flex;margin-left: 42px;">
         <p style="color: #294666;font-size: 11px;">GESTÃO DA QUALIDADE NA APS</p>
     </div>
 </footer>
+<script>
+    $(() => {
+        let janelas = $(document).find('[id^=janela]').css('cursor', 'pointer').on("click", apagarJanelas);
+        apagarJanelas();
+        $(document).find('[id^=btn]').hide();
+        let botoes = $(document).find('[id^=botao]').map((index, botao) => {
+            $(botao).css('cursor', 'pointer');
+            $(botao).hover(() => {
+                $(document).find(`[id=btn_${index + 1}_2]`).show();
+            });
+            $(botao).mouseleave(() => {
+                $(document).find('[id^=btn]').hide();
+            });
+            $(botao).click(() => {
+                apagarJanelas();
+                $(janelas[index]).fadeIn();
+            })
+        })
+        function apagarJanelas() {
+            janelas.map((index, janela) => {
+                $(janela).hide();
+            })
+        }
+    })
+</script>
